@@ -35,5 +35,6 @@ int main(){
     circumference=2*PI*radius;
     printf("The area of given circle:%.2f \n",Area);
     printf("The circumference of given circle :%.2f \n",circumference);
+    return 0;
 
 }
