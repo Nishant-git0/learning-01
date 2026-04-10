@@ -72,6 +72,19 @@ int deposit(int deposit){
 int withdraw(int withdraw){
     return balance = balance - withdraw;
 }
+void setwithdraw(int withdraw){
+if(balance < withdraw){
+    this->withdraw (withdraw);
+}
+else{
+    withdraw = 0;
+}
+}
+int getwithdraw(){
+    return 0;
+}
+
+
 void display(){
     cout<<"the balance is :"<<balance<<endl;
 }
@@ -80,7 +93,7 @@ int main(){
     string name;
     int b;
     int deposit;
-    int withdraw;
+    int withdrawamount;
     cout<<"enter the name of account holder name :"<<endl;
     cin>>name;
     cout<<"Enter the balance :"<<endl;
@@ -88,11 +101,11 @@ int main(){
     cout<<"Enter the deposit amount :"<<endl;
     cin>>deposit;
     cout<<"Enter the withdrawal amount :"<<endl;
-    cin>>withdraw;
+    cin>>withdrawamount;
     Bankaccount b1(name,b);
     b1.display();
     cout<<"The deposit amount is :"<<deposit<<endl<<"the balance after deposit "<<b1.deposit(deposit)<<endl;
-    cout<<"The withdrawal amount is :"<<withdraw<<endl<<"The balance after withdrawal :"<<b1.withdraw(withdraw)<<endl;
+    cout<<"The withdrawal amount is :"<<withdrawamount<<endl<<"The balance after withdrawal :"<<b1.withdraw(withdrawamount)<<endl;
     return 0;
 
 }
