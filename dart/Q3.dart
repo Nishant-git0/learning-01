@@ -28,9 +28,9 @@ class Student {
 
 void main() {
   print("Enter the name :");
-  String _name = stdin.readLineSync() ?? "unknown";
+  String name = stdin.readLineSync() ?? "unknown";
   print("Enter the age :");
-  int _age = int.parse(stdin.readLineSync() ?? "0");
-  Student s = Student(_name, _age);
+  int age = int.parse(stdin.readLineSync() ?? "0");
+  Student s = Student(name, age);
   s.showinfo();
 }
